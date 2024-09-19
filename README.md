@@ -36,8 +36,6 @@ Elevate your productivity with our exquisite task management solution.
 
 © 2024 TodoList App. All rights reserved.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ### 🤝 Contributors
 
 This application is the result of collaborative efforts by the HuyIT2003. We appreciate all contributions and feedback from our team members and the open-source community.
