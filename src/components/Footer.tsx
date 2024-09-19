@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <p className='text-sm'>© {currentYear} TodoList App</p>
           <div className='flex items-center space-x-4'>
             <span className='text-sm'>React_12_TEAM2</span>
-            <a href='https://github.com/React_12_TEAM2' className='hover:text-gold-400 transition-colors'>
+            <a href='https://github.com/server-craftsman/todo-app' className='hover:text-gold-400 transition-colors'>
               <FaGithub size={20} />
             </a>
           </div>
