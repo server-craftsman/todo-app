@@ -105,17 +105,14 @@ const AddTaskForm: React.FC<AddTaskFormProps> = ({ onAddTask }) => {
           rules={[
             { required: true, message: 'Please select the end date!' },
             ({ getFieldValue }) => ({
-              validator(_, value) {
+              validator(_ : any, value: moment.Moment | null) {
                 const startDate = getFieldValue('startDate');
                 if (!value || !startDate) {
                   return Promise.resolve();
                 }
-                const endMoment = moment(value);
-                const startMoment = moment(startDate);
-                if (endMoment.isSameOrAfter(startMoment, 'day')) {
-                  return Promise.resolve();
-                }
-                return Promise.reject(new Error('End date must be on or after the start date!'));
+                return value.isBefore(startDate)
+                ? Promise.reject(new Error('End date must be greater than or equal to start date'))
+                : Promise.resolve();
               },
             }),
           ]}
